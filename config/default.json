@@ -1,0 +1,37 @@
+{
+    "srv": {
+        "restful": {
+            "addr": "0.0.0.0"
+            , "port": 5090
+            , "fSecure":true
+            , "cert":{
+                "path":"../../cert/"
+                ,"keyfile":"snakeoil.key"
+                ,"certfile":"snakeoil.crt"
+            }
+        }
+        ,"svcSet": {
+            "wp2r": {  // restful endpoint
+                "routePath":"./routes"
+                ,"svcPath":"./services/wp2r"
+                ,"setting":{
+                    "radAdmin": "administrator"
+                    ,"indexCol":"Day"
+                    ,"ValueCol":"Count"
+                    ,"sumKey":"Total"
+                    ,"lineSep":"\n"
+                    ,"tokenSep":":"
+                }
+                ,"errEnum":{
+                    "ERR_NONE":"None"
+                    ,"ERR_DUPLICATE":"DUPLICATE_POST"
+                    ,"ERR_WP":"WP_ERROR"
+                    ,"ERR_INV_REQ":"INVALID_REQUEST"
+                }
+            }
+        }   /* end of svcSet dict */
+    }
+    ,"logCfg":{
+        "path":"./logs/"
+    }
+}

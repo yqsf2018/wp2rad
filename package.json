@@ -1,0 +1,25 @@
+{
+  "name": "wpu2rad",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "prestart": "./scripts/prestart.sh"
+  },
+  "dependencies": {
+    "array-compare": "2.0.0",
+    "async": "2.5.0",
+    "body-parser": "~1.13.2",
+    "config": "~1.21.0",
+    "debug": ">=2.6.9",
+    "express": "~4.13.1",
+    "method-override": "^2.3.9",
+    "moment-timezone": "^0.5.14",
+    "mysql": "2.16.0",
+    "promise-mysql":"3.3.1",
+    "rsvp": "^4.8.4",
+    "striptags": "^3.1.1",
+    "validator": "~5.4.0",
+    "winston": "~2.2.0"
+  }
+}
